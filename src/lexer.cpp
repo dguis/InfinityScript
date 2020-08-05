@@ -11,6 +11,6 @@ using namespace std;
 vector<string> Lexer::lexline(string line)
 {
     Toolbox toolbox;
-    vector<string> lexed = toolbox.split(line);
+    vector<string> lexed = toolbox.split(line, " ");
     return lexed;
 }

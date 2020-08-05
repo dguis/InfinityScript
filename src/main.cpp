@@ -11,11 +11,14 @@ int main()
 	getline(cin, myLine);
 	//string keysptr;
 	//keysptr = lexer.lexline(myLine);
-	vector<string> keysptr = lexer.lexline(myLine);
-	//string (&ref)[3] = keysptr;
-	cout << keysptr[0];
-	//string keysptrDeref;
-	//keysptrDeref = keysptr;
-	//cout << keysptrDeref.c_str();
+	vector<string> keys = lexer.lexline(myLine);
+
+	for (auto key: keys)
+	{
+
+		cout << key << endl;
+
+	}
+	system("pause");
 	return 0;
 }

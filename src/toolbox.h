@@ -9,7 +9,7 @@ namespace TB
     class Toolbox
     {
     public:
-        std::vector<std::string> split(std::string line);
+        std::vector<std::string> split(std::string line, std::string delim);
     };
 } // namespace TB
 

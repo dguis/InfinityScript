@@ -6,45 +6,21 @@
 using namespace TB;
 using namespace std;
 
-vector<string> Toolbox::split(string line)
+vector<string> Toolbox::split(string line, string delim)
 {
 	vector<string> keys;
-	keys.push_back("hello");
-	keys.push_back("goodbye");
-	return keys;
-	/*string word = "";
-	string whole = "";
-	int counter = 0;
-	for (char x : line)
-	{
-		if (x == ' ')
-		{
-			whole = whole + word;
-			word = ":";
-			counter += 1;
-		}
-		else
-		{
-			word = word + x;
-		}
-	}
-	string colthing = whole + word;
+	
+	size_t pos = line.find(delim);
 
-	string keys[counter];
-	word = "";
-	counter = 0;
-	for (char x : line)
+	while (pos != std::string::npos)
 	{
-		if (x == ' ')
-		{
-			keys[counter] = word;
-			word = "";
-			counter++;
-		}
-		else
-		{
-			word = word + x;
-		}
+
+		pos = line.find(delim);
+		keys.push_back(line.substr(0, pos));
+		line = line.substr(pos+1, line.length());
+
 	}
-	return keys;*/
+
+	return keys;
+	
 }
